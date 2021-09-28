@@ -4,10 +4,15 @@ import Footer from './components/footer/footer';
 import UsrStockList from './components/UsrStockList/UsrStockList';
 
 function App() {
+  const bodyStyle = {
+    'background-color': 'var(--green)'
+  }
+
+
   return (
     <div class="app">
       <Header />
-      <body>
+      <body style={bodyStyle}>
         <UsrStockList />
       </body>
       <Footer appCreator="Ismael Tovar"/>
