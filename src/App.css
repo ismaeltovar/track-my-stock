@@ -1,0 +1,7 @@
+@import './index.css';
+
+body {
+  background-color: var(--green);
+  display: flex;
+  justify-content: space-around;
+}
