@@ -1,6 +1,7 @@
 @import '../../index.css';
 
 .usr-stock-list {
+  flex: 4em 2;
   padding: 1em;
 }
 
