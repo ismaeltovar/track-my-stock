@@ -1,0 +1,10 @@
+@import '../../index.css';
+
+.usr-stock-graph {
+  flex: 4em 3;
+  padding: 1em;
+  margin: 1em;
+  background-color: var(--black);
+  color: var(--green);
+  text-align: center;
+}
