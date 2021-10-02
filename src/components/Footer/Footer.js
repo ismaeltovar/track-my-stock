@@ -4,7 +4,7 @@ import './Footer.css';
 function Footer(props) {
   return ( 
     <footer>
-      <p id="copyright-notice">Copyright 2021 {props.appCreator}</p>
+      <p id="copyright-notice">Copyright {'\u00A9'} 2021 {props.appCreator}</p>
     </footer>
   );
 }
