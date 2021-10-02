@@ -18,16 +18,16 @@ function UsrStockList() {
 
   //sorts stocks in descending order based on price
   usrStocks.sort((a, b) => {
-    return b.price - a.price;
+    return b.prices.Oct - a.prices.Oct;  //uses the stock's october price
   });
   
   return (
     <ul className="usr-stock-list">
-      {usrStocks.map(({name, symbol, logo, price}) => (
-        <div className={`usr-stock-li ${name}`}>
-          <p className="usr-stock-logo">{logo}</p> {/* Custom company logos to stock items for better UI */}
-          <p className="usr-stock-name-symbol">{name} ({symbol})</p>
-          <p className="usr-stock-price">${price} USD</p>
+      {usrStocks.map(({name, symbol, logo, prices}) => (
+        <div className={`usr-stock-li ${name}`}> 
+            <p className="usr-stock-logo">{logo}</p> {/* Custom company logos to stock items for better UI */}
+            <p className="usr-stock-name-symbol">{name} ({symbol})</p>
+            <p className="usr-stock-price">${prices.Oct} USD</p>
         </div>
       ))}
     </ul>
