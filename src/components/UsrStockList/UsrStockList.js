@@ -1,12 +1,6 @@
 import React from 'react';
-import Stocks from '../../stocks.js';
+import { stocks, usrStocks } from '../../stocks.js';
 import './UsrStockList.css';
-
-let usrStocks = [
-  Stocks.find(stock => stock.symbol === 'GOOGL'),
-  Stocks.find(stock => stock.symbol === 'FB'),
-  Stocks.find(stock => stock.symbol === 'TSLA')
-];
 
 /* possibly use to get logo of stocks
 function getLogo(stockName) {

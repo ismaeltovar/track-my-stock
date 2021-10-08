@@ -2,7 +2,7 @@
 //Note: price property contains the close price of stock for the first day of each month (year 2021)
 //make a variable that stores the user's stock choices
 
-let stocks = [
+export let stocks = [
   {
     name: 'Alphabet', 
     symbol:'GOOGL', 
@@ -18,8 +18,8 @@ let stocks = [
       'Aug': 2893,
       'Sep': 2673,
       'Oct': 2730,
-      'Nov': 0,
-      'Dec': 0
+      'Nov': null,
+      'Dec': null
     }
   },
   {
@@ -37,8 +37,8 @@ let stocks = [
       'Aug': 379,
       'Sep': 339,
       'Oct': 343,
-      'Nov': 0,
-      'Dec': 0
+      'Nov': null,
+      'Dec': null
     }
   },
   {
@@ -56,10 +56,14 @@ let stocks = [
       'Aug': 735,
       'Sep': 775,
       'Oct': 775,
-      'Nov': 0,
-      'Dec': 0
+      'Nov': null,
+      'Dec': null
     }
   }
 ];
 
-export default stocks;
+export let usrStocks = [
+  stocks.find(stock => stock.symbol === 'GOOGL'),
+  stocks.find(stock => stock.symbol === 'FB'),
+  stocks.find(stock => stock.symbol === 'TSLA')
+];
