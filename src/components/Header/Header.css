@@ -9,9 +9,25 @@
 header {
   background-color: var(--black);
   min-width: 100vw;
+  display: flex;
 }
 
 #pg-title {
   color: var(--white);
   padding: 1em 0em;
+}
+
+#drawer-button {
+  color: var(--white);
+  background-color: var(--black);
+  margin: auto 1.7em;
+  border-style: none;
+}
+
+#drawer-button:hover {
+  cursor: pointer;
+}
+
+#drawer-button i {
+  font-size: 2.5em;
 }
