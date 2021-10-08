@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css';
 
-function Header() {
-  const [pgTitle, setPgTitle] = useState('My Stocks');
+export default function Header(props) {
 
   return (
     <header>
-      <h1 id="pg-title">{pgTitle}</h1>
+      <h1 id="pg-title">{props.pgTitle}</h1>
     </header>
   );
 }
-
-export default Header;
