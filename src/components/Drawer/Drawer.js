@@ -7,9 +7,14 @@ export default function Drawer(props) {
     <div id="drawer-container">
       <div id="background-overlay">
       </div>
-      <div id="drawer">  
+      <div id="drawer">
         <button id="close-drawer-btn" onClick={props.hideDrawerClick}><i class="bi bi-x"></i></button>
+        <nav id="links-menu">
+          {appPages.map(({name, link}) => {
+            return (<button class="page-link" onClick={props.setCurrentPage}>{name}</button>);
+          })}
+        </nav>
       </div>
     </div>
-  ); 
+  );
 }

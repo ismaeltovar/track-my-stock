@@ -1,4 +1,4 @@
-@import '../../index.css';
+ @import '../../index.css';
 
 #background-overlay {
   background-color: var(--black);
@@ -31,4 +31,28 @@
 
 #close-drawer-btn:hover {
   cursor: pointer;
+}
+
+#links-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em 0em;
+}
+
+.page-link {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1em 0em;
+  margin: 1em 0em;
+  font-size: 1em;
+  border: .3em solid var(--white);
+}
+
+.page-link:hover {
+  color: var(--green);
+  border: .3em solid var(--green);
+  text-decoration: underline;
+  cursor: pointer;
+  transform: scale(1.05);
 }
