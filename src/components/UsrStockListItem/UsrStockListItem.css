@@ -1,33 +1,32 @@
 @import '../../index.css';
 
-.usr-stock-list {
-  flex: 4em 2;
-  padding: 1em;
-}
-
 .usr-stock-li {
   background-color: var(--black);
   color: var(--white);
+  display: block;
+  width: 95%;
   padding: 1em;
   margin: 1em 1em;
   display: flex;
   box-shadow: .35em .35em .35em var(--gray);
 }
 
+.usr-stock-li:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 .usr-stock-logo {
   color: var(--green);
-  font-size: 1.5em;
+  font-size: 2em;
   padding: .2em;
   font-weight: bold;
   text-shadow: 0 0 .1em var(--light-gray), .01em .01em .1em var(--light-gray), .01em -.01em .1em var(--light-gray);
 }
 
-.usr-stock-name-symbol {
-  padding: .8em .4em;
-  font-weight: bold;
-}
-
+.usr-stock-name-symbol,
 .usr-stock-price {
-  padding: .8em .4em;
+  font-size: 1.3em;
+  padding: .8em .5em;
   font-weight: bold;
 }
