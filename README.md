@@ -8,6 +8,8 @@ Link to API: <a href="https://www.alphavantage.co/" target="_blank">https://www.
 
 This repository is private, for now.
 
+The exact modules used for this project are located in the `package-lock.json` and `package.json` files.
+
 To run and test the application:
 
 1. Make sure you have `node` and `npm` installed on your system.
