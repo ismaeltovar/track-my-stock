@@ -2,6 +2,7 @@
 
 .usr-stock-li {
   background-color: var(--black);
+  border-radius: 1em;
   color: var(--white);
   display: block;
   width: 95%;
@@ -14,6 +15,15 @@
 .usr-stock-li:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+
+/* For list items that are selected (data displayed on graph) */
+.selected-li {
+  border: .4em outset var(--white);
+}
+
+.unselected-li {
+  border: .4em outset var(--light-gray);
 }
 
 .usr-stock-logo {
