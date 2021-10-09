@@ -1,6 +1,6 @@
 @import '../../index.css';
 
-.usr-stock-graph {
+#usr-stock-graph-container {
   flex: 4em 3;
   padding: 1em;
   margin: 1em;
