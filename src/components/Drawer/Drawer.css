@@ -53,6 +53,7 @@
 .page-link {
   background-color: var(--black);
   color: var(--white);
+  font-weight: bold;
   padding: 1em 0em;
   margin: 1em 0em;
   font-size: 1em;
