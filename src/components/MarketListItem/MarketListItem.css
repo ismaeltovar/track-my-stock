@@ -1,0 +1,53 @@
+@import '../../index.css';
+
+.market-li {
+  background-color: var(--black);
+  border-radius: 1em;
+  border: .4em outset var(--light-gray);
+  color: var(--white);
+  width: 95%;
+  padding: 1em;
+  margin: 1em 1em;
+  display: flex;
+  box-shadow: .35em .35em .35em var(--gray);
+  align-items: center;
+}
+
+.market-li:hover {
+  background-color: var(--dark-gray);
+  cursor: default;
+}
+
+.market-li-logo {
+  color: var(--green);
+  font-size: 2em;
+  padding: .2em;
+  font-weight: bold;
+  text-shadow: 0 0 .1em var(--light-gray), .01em .01em .1em var(--light-gray), .01em -.01em .1em var(--light-gray);
+}
+
+.market-li-name-symbol,
+.market-li-price {
+  font-size: 1.3em;
+  padding: .8em .5em;
+  font-weight: bold;
+}
+
+.market-li-add-btn {
+  background: none;
+  color: var(--white);
+  font-size: 2em;
+  border: none;
+  margin-left: auto;
+  margin-right: .1em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.market-li-add-btn:hover {
+  color: var(--green);
+  cursor: pointer;
+}

@@ -1,6 +1,13 @@
 @import '../../index.css';
 
+/*--- Styling for My Stocks page ---*/
 .usr-stock-list {
   flex: 4em 2;
   padding: 1em;
+}
+
+/*--- Styling for Market page ---*/
+.market-list {
+  display: flex;
+  flex-wrap: wrap;
 }
