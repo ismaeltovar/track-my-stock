@@ -4,12 +4,12 @@
   background-color: var(--black);
   border-radius: 1em;
   color: var(--white);
-  display: block;
   width: 95%;
   padding: 1em;
   margin: 1em 1em;
   display: flex;
   box-shadow: .35em .35em .35em var(--gray);
+  align-items: center;
 }
 
 .usr-stock-li:hover {
