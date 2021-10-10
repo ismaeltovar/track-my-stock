@@ -15,7 +15,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       showDrawerBool: false,
-      selectedPage: appPages.find(page => 'My Stocks')
+      selectedPage: appPages.find(page => page.name === 'My Stocks')
     }
   }
 
@@ -23,14 +23,14 @@ export default class App extends React.Component {
 
   hideDrawer = () => this.setState({showDrawerBool: false});
 
+  setSelectedPage = (pageToSet) => this.setState({showDrawerBool: false, selectedPage: appPages.find(page => page.name === pageToSet)});
 
   render() {
-
     return (
       <div id="app">
         <Header showDrawerClick={this.showDrawer} pgTitle={this.state.selectedPage.name}/>
         <Body selectedPage={this.state.selectedPage.name}/>
-        {this.state.showDrawerBool && <Drawer hideDrawerClick={this.hideDrawer} />}
+          {this.state.showDrawerBool && <Drawer hideDrawerClick={this.hideDrawer} navLinkClick={this.setSelectedPage} />}
         <Footer appCreator="Ismael Tovar"/>
       </div>
     );

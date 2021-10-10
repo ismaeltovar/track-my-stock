@@ -14,7 +14,7 @@ export default function Drawer(props) {
         </div>
         <nav id="links-menu">
           {appPages.map(({name, link}) => {
-            return (<button class="page-link" onClick={props.setCurrentPage}>{name}</button>);
+            return (<button class="page-link" onClick={props.navLinkClick.bind(null, name)}>{name}</button>);
           })}
         </nav>
       </div>

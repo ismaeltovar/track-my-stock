@@ -26,29 +26,14 @@ function MyStocks() {
     </body>
   );
 }
-/* For later use
+
 function Market() {
   return (
     <div>
     </div>
   );
 }
-*/
+
 export default function Body(props) {
-  if (props.selectedPage === 'My Stocks') {
-    return (
-      <>
-        <MyStocks />
-      </>
-    ); 
-  }
-  /*
-  if (props.selectedPage === 'Market') {
-    return (
-      <>
-        <Market />
-      </>
-    );
-  }
-  */
+  return (props.selectedPage === 'My Stocks' ? <MyStocks /> : <Market />);
 }
