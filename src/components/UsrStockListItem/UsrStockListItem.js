@@ -13,6 +13,7 @@ export default function UsrStockListItem(props) {
       <p className="usr-stock-logo">{props.logo}</p> {/* Custom company logos to stock items for better UI */}
       <p className="usr-stock-name-symbol">{props.name} ({props.symbol})</p>
       <p className="usr-stock-price">${props.prices.Oct} USD</p>
+      <button className="usr-stock-remove-btn" onClick={props.onRemoveClick}><i class="bi bi-dash-circle"></i></button>
     </button>
   );
 }

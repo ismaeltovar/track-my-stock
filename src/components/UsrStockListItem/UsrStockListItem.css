@@ -40,3 +40,22 @@
   padding: .8em .5em;
   font-weight: bold;
 }
+
+.usr-stock-remove-btn {
+  background: none;
+  color: var(--white);
+  font-size: 2em;
+  border: none;
+  margin-left: auto;
+  margin-right: .1em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.usr-stock-remove-btn:hover {
+  color: var(--red);
+  cursor: pointer;
+}
