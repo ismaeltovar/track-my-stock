@@ -1,6 +1,6 @@
 # Track My Stock
 
-Stock tracking tool using the ![Alpha Vantage API](https://www.alphavantage.co/).
+Stock tracking tool using the [Alpha Vantage API](https://www.alphavantage.co/).
 
 ## Getting Started
 
