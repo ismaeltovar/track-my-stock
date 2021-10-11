@@ -23,4 +23,4 @@ TBD.
 
 ## License
 
-To be determined.
+This project is licensed under the ![GNU General Public License v3.0](https://github.com/ismaeltovar/track-my-stock/blob/main/LICENSE).
