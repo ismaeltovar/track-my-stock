@@ -1,5 +1,5 @@
 import React from 'react';
-import { appPages } from '../../App';
+import { appPages } from '../App/App';
 import './Drawer.css';
 
 export default function Drawer(props) {

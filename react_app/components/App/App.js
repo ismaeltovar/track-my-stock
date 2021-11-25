@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Body from './components/Body/Body';
-import Drawer from './components/Drawer/Drawer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import Body from '../Body/Body';
+import Drawer from '../Drawer/Drawer';
 import './App.css';
 
 export let appPages = [
