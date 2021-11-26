@@ -1,0 +1,29 @@
+{
+  "name": "track-my-stock",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "build": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismaeltovar/track-my-stock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ismaeltovar/track-my-stock/issues"
+  },
+  "homepage": "https://github.com/ismaeltovar/track-my-stock#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "10.19.0"
+  }
+}
