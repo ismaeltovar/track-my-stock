@@ -1,0 +1,7 @@
+@import '../../index.css';
+
+/*--- Styling for Market page ---*/
+.market-list {
+  display: flex;
+  flex-wrap: wrap;
+}

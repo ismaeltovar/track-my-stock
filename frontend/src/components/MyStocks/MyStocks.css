@@ -5,9 +5,3 @@
   flex: 4em 2;
   padding: 1em;
 }
-
-/*--- Styling for Market page ---*/
-.market-list {
-  display: flex;
-  flex-wrap: wrap;
-}

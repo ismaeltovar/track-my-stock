@@ -1,13 +1,15 @@
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Body from '../Body/Body';
+import MyStocks from '../MyStocks/MyStocks';
+import Market from '../Market/Market';
 import Drawer from '../Drawer/Drawer';
 import './App.css';
+import { getLocalStorageData } from '../../storageMethods';
 
 export let appPages = [
-  {name: 'My Stocks', url: ''},
-  {name: 'Market', url: ''}
+  {name: 'My Stocks', url: '/mystocks'},
+  {name: 'Market', url: '/market'}
 ];
 
 export default class App extends React.Component {
@@ -15,7 +17,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       showDrawerBool: false,
-      selectedPage: appPages.find(page => page.name === 'My Stocks')
+      selectedPage: appPages[0]
     }
   }
 
@@ -29,8 +31,8 @@ export default class App extends React.Component {
     return (
       <div id="app">
         <Header showDrawerClick={this.showDrawer} pgTitle={this.state.selectedPage.name}/>
-        <Body selectedPage={this.state.selectedPage.name}/>
-          {this.state.showDrawerBool && <Drawer hideDrawerClick={this.hideDrawer} navLinkClick={this.setSelectedPage} />}
+        {this.state.selectedPage.name === 'My Stocks' ? <MyStocks /> : <Market />}
+        {this.state.showDrawerBool && <Drawer hideDrawerClick={this.hideDrawer} navLinkClick={this.setSelectedPage} />}
         <Footer appCreator="Ismael Tovar"/>
       </div>
     );

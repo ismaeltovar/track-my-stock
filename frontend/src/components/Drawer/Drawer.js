@@ -10,7 +10,7 @@ export default function Drawer(props) {
       <div id="drawer">
         <div id="top-of-drawer">
           <button id="close-drawer-btn" onClick={props.hideDrawerClick}><i class="bi bi-x"></i></button>
-          <img id="drawer-logo" src="./favicon.ico" alt="Logo"></img>
+          {/*Problematic code: <img id="drawer-logo" src='./favicon.ico' alt="Logo"></img>*/}
         </div>
         <nav id="links-menu">
           {appPages.map(({name, link}) => {
