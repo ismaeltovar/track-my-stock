@@ -4,6 +4,8 @@ import App from './components/App/App';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 ReactDOM.render(
-  <App />,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
