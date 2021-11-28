@@ -1,12 +1,20 @@
 'use strict';
 var request = require('request');
 const path = require('path');
+//Express framework
 const express = require("express");
+const app = express();
+const dotenv = require('dotenv');
+const result = dotenv.config()
 
+//checks for errors when getting configuration data
+if (result.error) {
+  throw result.error
+}
+
+let API_KEY = result.parsed['API_KEY'];
 
 const PORT = process.env.PORT || 3001;
-
-const app = express();
 
 app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 
@@ -14,9 +22,9 @@ app.get("/api", (req, res) => {
   res.json({message: "API request received."});
 });
 
-app.get("/ibm", (req, res) => {
+app.get("/IBM", (req, res) => {
   let stockData;
-  let url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo';
+  let url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=${API_KEY}`;
 
   request.get({
     url: url,
