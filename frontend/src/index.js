@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import MyStocks from './components/MyStocks/MyStocks';
-import Market from './pages/Market/Market';
-import Drawer from './components/Drawer/Drawer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Header, Footer, MyStocks, Market } from './components';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div id="app">
+    <Router>
       <Header pgTitle={'My Stocks'}/>
-        <MyStocks />
+        <Routes>
+          <Route className="nav-link" path="/my-stocks" element={<MyStocks />} />
+          <Route className="nav-link" path="/market" element={<Market />} />
+        </Routes>
       <Footer appCreator="Ismael Tovar"/>
-    </div>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
