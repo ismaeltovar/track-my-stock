@@ -1,24 +1,14 @@
 //Using the ChartJS library (licensed under MIT license) for the graph
 import React, { useEffect, useState } from "react";
-import {stocks, usrStocks} from "../../stocks";
+import {getStockData, usrStocks} from "../../stocks";
 import Chart from 'chart.js/auto';  //imports & registers controllers, elements, scales, and plugins for use
 import './Graph.css'; 
 import './ListItem.css';
 import './MyStocks.css';
 
-if (sessionStorage.getItem('selectedStock') == null) {
-  sessionStorage.setItem('selectedStock', sessionStorage.getItem('usrStocks'));
-}
-
 function findStock(symbol) {
   return usrStocks.find(stock => stock.symbol === symbol);
 }
-
-/* possibly use to get logo of stocks
-function getLogo(stockName) {
-  return usrStocks.stockName.symbol.substring(0, 1);
-}
-*/
 
 function UsrStockListItem(props) {
   return (
@@ -40,7 +30,6 @@ var graphObj;
 function UsrStockGraph(props) {
 
   useEffect(() => {
-
     const labels = [
       'Jan',
       'Feb',
@@ -93,16 +82,17 @@ export default function MyStocks() {
     return b.prices.Oct - a.prices.Oct;  //uses the stock's october price
   });
 
-  const [selectedStock, setSelectedStock] = useState(sessionStorage.getItem('selectedStock')); //finds first stock in user stock list
+  const [selectedStock, setSelectedStock] = useState(sessionStorage.getItem('selectedStock'));
+  const [userStocks, setUsrStocks] = useState(usrStocks);
 
   return (
     <body>
       <ul className="usr-stock-list">
       {usrStocks.map(({name, symbol, logo, prices}) => (
-        <UsrStockListItem selected={symbol === selectedStock.symbol ? true : false} name={name} symbol={symbol} logo={logo} prices={prices} onClick={() => setSelectedStock(findStock(symbol))}/>
+        <UsrStockListItem selected={symbol === selectedStock ? true : false} name={name} symbol={symbol} logo={logo} prices={prices} onClick={() => {setSelectedStock(symbol); sessionStorage.setItem('selectedStock', symbol)}}/>
       ))}
       </ul>
-      <UsrStockGraph selectedStockPrices={selectedStock.prices}/>
+      <UsrStockGraph selectedStockPrices={sessionStorage.getItem('selectedStock') == undefined ? 'none' : findStock(selectedStock).prices}/>
     </body>
   );
 }

@@ -31,3 +31,7 @@ header {
 #drawer-button i {
   font-size: 2.5em;
 }
+
+.nav-item {
+  text-decoration: none;
+}

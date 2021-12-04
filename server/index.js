@@ -24,14 +24,52 @@ app.use(bp.urlencoded({extended : true}));
 app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 
 app.get("/api", (req, res) => {
-  res.json({message: "Wrong method of request. Try using a POST request instead."});
+  res.json({message: "Wrong method of request."});
 });
 
-//POST request for API calls
-app.post('/api', (req, res) => {
-  let symbol = req.body.symbol;
-  res.json(makeAPIRequest(symbol));
+//***** GET request for API calls *******
+app.get('/GOOGL', (req, res) => {
+  let stockData;
+  let url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=GOOGL&interval=5min&apikey=${API_KEY}`;
+
+  request.get({
+    url: url,
+    json: true,
+    headers: {'User-Agent': 'request'}
+  }, (err, res, data) => {
+    if (err) {
+      console.log('Error:', err);
+    } else if (res.statusCode !== 200) {
+      console.log('Status:', res.statusCode);
+    } else if (data == undefined) {
+      console.log("Error: Data is undefined");
+    } else {
+      console.log(`Get request successful for: GOOGL`);
+      stockData = data;
+      console.log(data);
+    }
+  });
+  res.json(stockData);
 });
+
+app.get('/IBM', (req, res) => {
+  res.json(makeAPIRequest('IBM'));
+});
+
+app.get('/TSLA', (req, res) => {
+  res.json(makeAPIRequest('TSLA'));
+});
+
+app.get('/FB', (req, res) => {
+  res.json(makeAPIRequest('FB'));
+});
+
+app.get('/NFLX', (req, res) => {
+  res.json(makeAPIRequest('NFLX'));
+  
+});
+
+//*****************************
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));

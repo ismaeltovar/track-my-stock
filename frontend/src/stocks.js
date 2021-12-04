@@ -62,8 +62,25 @@ export let stocks = [
   }
 ];
 
+export let marketStocks = [
+  {name: 'Alphabet Inc.', symbol: 'GOOGL'}, 
+  {name: 'International Business Machines Corporation', symbol: 'IBM'}, 
+  {name: 'Tesla, Inc.', symbol: 'TSLA'}, 
+  {name: 'Meta Platforms, Inc.', symbol: 'FB'}, 
+  {name: 'Netflix, Inc.', symbol: 'NFLX'}, 
+];
+
+//sample data
 export let usrStocks = [
   stocks.find(stock => stock.symbol === 'GOOGL'),
   stocks.find(stock => stock.symbol === 'FB'),
   stocks.find(stock => stock.symbol === 'TSLA')
 ];
+
+export function getStockData(symbol) {
+  let stockData;
+  fetch(`/${symbol}`)
+    .then((res) => stockData = res.json())
+    .catch((err) => console.log(err));
+  return stockData;
+}

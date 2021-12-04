@@ -7,13 +7,13 @@ export default function Header(props) {
   return (
     <header>
       <h1 id="pg-title">{props.pgTitle}</h1>
-      <nav>
+      <nav class="navbar-nav">
         <ul>
-          <li className="nav-item">
-            <NavLink to="/my-stocks">My Stocks</NavLink>
+          <li>
+            <NavLink className="nav-item active" to="/my-stocks">My Stocks</NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink to="/market">Market</NavLink>
+          <li>
+            <NavLink className="nav-item" to="/market">Market</NavLink>
           </li>
         </ul>
       </nav>
