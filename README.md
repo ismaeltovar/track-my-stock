@@ -11,9 +11,10 @@ The exact modules used for this project are located in the `package-lock.json` a
 To run and test the application:
 
 1. Make sure you have `node` and `npm` installed on your system.
-2. Clone this repository to your system, move into the root directory of the cloned project, and run `npm install` to install the `node_modules` directory.
-3. Run `npm run build` to build the application.
-4. Run `npm start` to start the development server.
+2. Clone this repository to your system
+3. In the `frontend` directory, run `npm install` to install the `node_modules` directory. Do the same with the `server` directory.
+4. In the `frontend` directory, run `npm start` to start the client development server. Do the same with the `server` directory to start the backend development server.
+5. Access `LocalHost` using your browser of choice.
 
 ## Contributing
 
