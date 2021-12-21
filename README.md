@@ -4,8 +4,6 @@ Stock tracking tool using the [Alpha Vantage API](https://www.alphavantage.co/).
 
 ## Getting Started
 
-This repository is private, for now.
-
 The exact modules used for this project are located in the `package-lock.json` and `package.json` files.
 
 To run and test the application:
